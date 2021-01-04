@@ -8,7 +8,7 @@ pipeline {
      }
      stage ("Deploy") {
        steps {
-         sh "cf login -a https://api.cf.us10.hana.ondemand.com -u personalvijay007@gmail.com -p Vijay@007"
+         sh "cf login -a https://api.cf.us10.hana.ondemand.com"
          sh "cf push my-python-app1 -m 128M --random-route"
        }
      }
