@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment {
+       mycreds = credentials('cf-flask')
+    }
   stages {
      stage ("Build") {
         steps {
@@ -8,7 +11,7 @@ pipeline {
      }
      stage ("Deploy") {
        steps {
-         sh "cf login -a https://api.cf.us10.hana.ondemand.com"
+         sh "cf login -a https://api.cf.us10.hana.ondemand.com $mycreds"
          sh "cf push my-python-app1 -m 128M --random-route"
        }
      }
