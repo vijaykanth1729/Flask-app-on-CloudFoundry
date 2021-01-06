@@ -12,7 +12,7 @@ pipeline {
     }
        steps {
          sh "cf login -a https://api.cf.us10.hana.ondemand.com -u $mycreds_USR -p $mycreds_PSW"
-         sh "cf push my-python-app1 -m 128M --random-route"
+         sh "cf push iamvijay1 -m 128M"
        }
      }
   }
