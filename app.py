@@ -5,7 +5,7 @@ app = Flask(__name__)
 port = int(os.getenv('PORT', '3000'))
 @app.route('/')
 def home():
-    return "<h1>Hello world, deployed successfully on CloudFoundry on SAP Platform</h1>"
+    return "<h1>Hello world, Running on SAP CloudFoundry</h1>"
 
 @app.route('/test')
 def test():
